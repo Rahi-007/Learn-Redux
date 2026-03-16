@@ -10,7 +10,8 @@ function objectToUrlParams(obj: Record<string, any>): string {
 
 export const API_URLS = {
   user: {
-    all: (s?: Record<string, any>) =>  api(["user", objectToUrlParams(s || {})].join("?")),
+    all: (s?: Record<string, any>) =>
+      api(["user", objectToUrlParams(s || {})].join("?")),
     add: () => api("user"),
     get: (id: number) => api(`user/${id}`),
     create: () => api("user"),

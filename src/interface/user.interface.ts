@@ -9,17 +9,17 @@ export interface IUser {
   status: "active" | "suspend" | "inActive";
   createdAt?: Date;
   createdBy: {
-    id: number,
-    name: string
+    id: number;
+    name: string;
   };
   updatedAt?: Date;
   updatedBy?: {
-    id: number,
-    name: string
+    id: number;
+    name: string;
   };
 }
 
-export interface IAddUser { 
+export interface IAddUser {
   name: string;
   phone: string;
   address: string;

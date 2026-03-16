@@ -11,5 +11,5 @@ export interface SearchParams {
 }
 export interface DataRow<T> {
   data: T[];
-  totalRows: number; 
+  totalRows: number;
 }
