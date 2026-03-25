@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "@/provider/themeProvider";
+import { ThemeProvider } from "@/provider/theme.provider";
 import { Salsa, Roboto_Condensed } from "next/font/google";
 import "../style/globals.css";
+import Redux from "@/provider/redux.provider";
+import StoreProvider from "@/provider/store.provider";
 
 const salsa = Salsa({
   variable: "--font-salsa",
@@ -35,7 +37,9 @@ export default function RootLayout({ children }: Readonly<IProps>) {
           enableSystem={false}
           disableTransitionOnChange
         >
-          {children}
+          <StoreProvider>
+            <Redux>{children}</Redux>
+          </StoreProvider>
         </ThemeProvider>
       </body>
     </html>
